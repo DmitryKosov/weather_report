@@ -1,7 +1,8 @@
 import json
 import datetime
 
-def get_temperature_now():
+#Report data: now (7.30), 12.00 and 18.00
+def get_temperature_now(): 
     temperature = forecast_by_time[0]["parameters"][11]["values"][0]
     return round(temperature)
 
@@ -41,7 +42,6 @@ def get_w_symbol():
     index = forecast_by_time[0]["parameters"][18]["values"][0] - 1 #returns value integer, 1-27
     return ws[index]
 
-#TODO change direction 180
 def get_wind_direction():
     directions = ["North","Northeast","East","Southeast","South","Southwest","West","Northwest"]
     wind_d = forecast_by_time[0]["parameters"][13]["values"][0]

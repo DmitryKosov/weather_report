@@ -1,7 +1,7 @@
 import os
-
 import report
 from gtts import gTTS
+
 
 temp_now = report.get_temperature_now()
 temp_12 = report.get_temperature_12()
@@ -20,9 +20,8 @@ string = ("""
     In the daytime is going to be {1} degrees.
     Tonight can be {2} degrees.""").format(temp_now, temp_12, temp_18, clouds, wind, 
                                         report.date, report.time, w_dir, ws)
-#More feelings in greetings
 
 tts = gTTS(string)
-tts.save("hello.mp3")
+tts.save("report.mp3")
 
-os.system("mpg123 hello.mp3")
+os.system("omxplayer report.mp3")
