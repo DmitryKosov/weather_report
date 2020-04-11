@@ -1,6 +1,5 @@
 import datetime
 import json
-from symbol import parameters
 
 #Report data: now (7.30), 12.00 and 18.00
 with open("weather.json", "r") as read_data:
@@ -12,7 +11,7 @@ with open("weather.json", "r") as read_data:
 def pick_data(string, time_now):
 
     """Pick data vi need from list of dictionaries forecast_by_time. Filter by time and parameter"""
-    
+
     for i in range(len(forecast_by_time)):
         if forecast_by_time[i]['validTime'] == time_now:
             param_list = forecast_by_time[i]['parameters']
