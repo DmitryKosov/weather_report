@@ -7,5 +7,4 @@ You need to install omxplayer
 sudo apt-get install omxplayer
 
 
-TODO search for data with time stample
 
